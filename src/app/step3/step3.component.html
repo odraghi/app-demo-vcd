@@ -1,0 +1,37 @@
+<div class="row mt-2">
+  <div class="col-4">
+    <h2 class="display-1">
+      Step3
+    </h2>
+    <h2 class="display-4">Extension d'un disque</h2>
+
+    <app-messages></app-messages>
+  </div>
+  <div class="col-4">
+    <div class="card" style="width: 18rem;">
+      <img src="assets/extdrive.png" class="card-img-top" alt="VM Disk" />
+      <div class="card-body">
+        <h3>Disques sur back</h3>
+        <ul class="list-unstyled">
+          <li *ngFor="let blockdevice of blockdevices.blockdevices">
+            <strong [ngClass]="{'text-success': blockdevice.size > 8000000000, 'text-danger': blockdevice.size < 8000000000}">
+              <fa name="database"></fa> {{ blockdevice.name }} {{ blockdevice.size / 1024 / 1024 / 1024 }} GB
+            </strong>
+          </li>
+        </ul>
+        <p class="card-text mt-2">
+          Appuyer sur le bouton Refresh jusqu'à ce que l'on voit que le disque a changé.
+        </p>
+        <button class="btn btn-primary" (click)="getBlockdevices()">
+          Refresh
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-4 bg-light">
+    <h3>Instructions</h3>
+    <ol>
+      <li>Sur le serveur back, augmenter la taille du Disque2 (au moins 10G)</li>
+    </ol>
+  </div>
+</div>

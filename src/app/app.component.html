@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" routerLink="/">Home</a>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a routerLink="/step1" class="nav-link">Step1</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/step2" class="nav-link">Step2</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/step3" class="nav-link">Step3</a>
+    </li>
+  </ul>
+</nav>
+
+<main role="main">
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3"><fa name="home"></fa> {{ title }} !</h1>
+      <p>
+        Ce site va nous permettre d'explorer les fonctionnalités de notre
+        plateforme.<br>C'est un bon point de départ pour appréhender les Use-cases
+        de vCloud Director.
+      </p>
+      
+      <img
+        width="250"
+        alt="Logo SFR BUSINESS"
+        src="https://www.itcomservices.fr/wp-content/uploads/2017/12/sfr-business-600x240-couleur-375x150_c.png"
+        alt=""
+      />
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <router-outlet></router-outlet>
+  </div>
+</main>
+
+<footer class="container-fluid mt-1">
+  <p>&copy; SFR Business 2017-2019</p>
+</footer>

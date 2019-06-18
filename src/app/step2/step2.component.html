@@ -1,0 +1,42 @@
+<div class="row mt-2">
+  <div class="col-4">
+    <h2 class="display-1">
+      Step2
+    </h2>
+    <h2 class="display-4">Microsegmentation</h2>
+      <app-messages></app-messages>
+  </div>
+  <div class="col-4">
+    <div class="card" style="width: 18rem;">
+      <img src="assets/firewall.png" class="card-img-top" alt="NSX Firewall" />
+      <div class="card-body">
+        <h5 class="card-title">Flux</h5>
+        <div *ngIf="blockdevices.blockdevices != undefined; else elseBlock">
+            <h2 class="card-title text-center text-success">Ouvert</h2></div>
+<ng-template #elseBlock><h2 class="card-title text-center text-danger">Fermé</h2></ng-template> 
+        <p class="card-text">
+          Appuyer sur le bouton Refresh jusqu'à ce que l'on voit que le flux du serveur web vers le back est bien ouvert.
+        </p>
+        <button class="btn btn-primary" (click)="getBlockdevices()">
+          Refresh
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-4 bg-light">
+    <h3>Instructions</h3>
+    <ol>
+      <li>Mettre web1 en standby dans la vip</li>
+      <li>Ajouter web2 dans le Security Group SG-WEB</li>
+    </ol>
+    <div class="mt-4">
+      <p>Une fois terminé vous pouvez passer à l'étape suivante..</p>
+      <a routerLink="/step3" class="btn btn-success" [ngClass]="{'disabled': blockdevices.blockdevices == undefined}">Next Step</a>
+    </div>
+  </div>
+</div>
+<div class="row mt-1">
+    <div class="col-12">
+        <img src="assets/schema-step2.png" class="img-fluid" alt="Schema step2">
+    </div>
+  </div>

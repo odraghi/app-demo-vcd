@@ -1,0 +1,48 @@
+<div class="row mt-2">
+  <div class="col-4">
+    <h2 class="display-1">
+      Step1
+    </h2>
+    <h2 class="display-4">Load-Balancing</h2>
+    <app-messages></app-messages>
+  </div>
+  <div class="col-4">
+    <div class="card" style="width: 18rem;">
+      <img
+        src="assets/loadbalancer.png"
+        class="card-img-top"
+        alt="NSX Loadbalencer"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Current server</h5>
+        <h2 class="card-title text-center text-success">{{ hostname.name }}</h2>
+        <p class="card-text">
+          Appuyer sur le bouton Refresh jusqu'à ce que l'on voit que le site
+          tourne sur plusieurs serveur web.
+        </p>
+        <button class="btn btn-primary" (click)="getHostname()">Refresh</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-4 bg-light">
+    <h3>Instructions</h3>
+    <ol>
+      <li>Copy de la vm web1 en web2</li>
+      <li>Activer la customisation de web2 et décocher la régénération d'un mot de passe.</li>
+      <li>Démarrer web2</li>
+      <li>Ajouter web2 dans la vip (loadbalancing)</li>
+      <li>Contrôler avec le bouton Refresh</li>
+      <li>Mettre web1 en standby dans la vip</li>
+      <li>Contrôler avec le bouton Refresh</li>
+    </ol>
+    <div class="mt-4">
+      <p>Une fois terminé vous pouvez passer à l'étape suivante..</p>
+      <a routerLink="/step2" class="btn btn-success">Next Step</a>
+    </div>
+  </div>
+</div>
+<div class="row mt-1">
+  <div class="col-12">
+      <img src="assets/schema-step1.png" class="img-fluid" alt="Schema step1">
+  </div>
+</div>
