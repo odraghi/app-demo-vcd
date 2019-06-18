@@ -55,5 +55,7 @@ useradd odraghi -m -s /bin/bash
 su - odraghi
 git clone https://github.com/odraghi/app-demo-vcd.git
 cd app-demo-vcd/src
+npm install
 ng serve
+
 ```
