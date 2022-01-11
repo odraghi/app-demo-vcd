@@ -12,9 +12,6 @@ apt-get -y update
 apt-get -y install nginx
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 apt-get install -y nodejs
-
-echo '* *  * * *  root  echo "{ \"name\": \"`cat /etc/hostname`\" }" >/var/www/html/hostname.json'  > /etc/cron.d/hostname-info
-echo '* *  * * *  root  sleep 30 && echo "{ \"name\": \"`cat /etc/hostname`\" }" >/var/www/html/hostname.json'  >> /etc/cron.d/hostname-info
 ```
 
 Use the file **nginx-default-web.conf** to setup de nginx service.
