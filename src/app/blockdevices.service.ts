@@ -26,7 +26,7 @@ export class BlockdevicesService {
     );
   }
 
-  /** Log a HostnameService message with the MessageService */
+  /** Log a BlockdevicesService message with the MessageService */
   private log(message: string) {
     this.messageService.add(`BlockdevicesService: ${message}`);
   }
