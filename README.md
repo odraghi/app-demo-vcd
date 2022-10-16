@@ -1,3 +1,5 @@
+![GitHub](https://img.shields.io/badge/angular-~7.2.0-blue)
+
 # app-demo-vcd
 Demo vcd
 
