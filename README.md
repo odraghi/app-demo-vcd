@@ -48,7 +48,7 @@ ln -s /usr/bin/nodejs /usr/local/bin/node
 npm install -g @angular/cli
 ```
 
-On devel vm, create a personnal account and work whith it
+On devel vm, create a personnal account and work with it
 ```
 useradd odraghi -m -s /bin/bash
 su - odraghi
